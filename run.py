@@ -11,9 +11,9 @@
            Released on "November 19th, 2020"
 """
 
-# Code by Dizzt#2468
-Version = "Nightly 125"
-Update_Date = "Oct 19, 2021"
+# Code by Dizzt (Dizzt#0116)
+Version = "Nightly 145"
+Update_Date = "Mar 23, 2023"
 
 
 
@@ -24,6 +24,8 @@ import discord
 from discord import ext
 from discord.ext import commands
 from discord.ext import tasks
+from discord.ui import Button, View
+from discord import ButtonStyle
 import asyncio
 
 # 0.2. Dir. Manager
@@ -230,8 +232,9 @@ def iv2(i):
 ####### 3. Discord Bot Client #######
 
 # 3.1. Create Discord Client
-
-client = commands.Bot(command_prefix=[prefix], case_insensitive=False)
+intents = discord.Intents.default()
+intents.message_content = True
+client = commands.Bot(command_prefix=[prefix], intents = intents)
 
 @client.event # Use these decorator to register an event.
 async def on_ready(): # on_ready() event : when the bot has finised logging in and setting things up
