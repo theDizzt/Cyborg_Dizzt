@@ -12,7 +12,7 @@
 """
 
 # Code by Dizzt#0116
-Version = "Nightly 149"
+Version = "Nightly 150"
 Update_Date = "May 20, 2023"
 
 ####### 0. Modules #######
@@ -139,6 +139,15 @@ def coinWrite(user_id, value):
 
 # 2.2.1 Constants
 final_lv = 160
+arr_emblem = [[
+    'Initial', 'Scarlet', 'Amber', 'Topaz', 'Chlorophyll', 'Aquatic',
+    'Sapphire', 'Violette', 'Comsic', 'Ultimate'
+],
+              [
+                  'Square', 'Ring', 'Trigon', 'Stelle', 'Hexagon', 'Diamond',
+                  'Hexagram', 'Insignia', 'Plasma', 'Collar', 'Cardioid',
+                  'Fluid', 'Flame', 'Bolt', 'Solarus', 'Polyphemus'
+              ]]
 
 
 # 2.2.2. XP Sheet Array
@@ -338,7 +347,6 @@ async def on_message(
                   str(int(coinRead(message.author.id)) + coin_gain))
 
         if level_up(temp_lv, int(dataRead(message.author.id))):
-
             """
             background_image = Image.open("./rank/up.png").convert('RGBA')
             rank_image_1 = Image.open(
@@ -382,7 +390,9 @@ async def on_message(
             await message.channel.send(
                 file=discord.File(buffer_output, 'myimage.png'))
             """
-            await message.channel.send("**LEVEL UP!** `{}`는 레벨 {}가 되었습니다.".format(message.author, temp_lv + 1))
+            await message.channel.send(
+                "**LEVEL UP!** `{}`는 레벨 {}가 되었습니다.".format(
+                    message.author, temp_lv + 1))
 
     except:
         dataWrite(message.author.id, str(xp_gain))
@@ -660,6 +670,7 @@ async def on_message(
 
 # 3.3.0. Level Viewer (temp)
 
+
 # 3.3.0.1. Text Only
 @client.command()
 async def tprofile(ctx, id=None):
@@ -698,7 +709,7 @@ async def tprofile(ctx, id=None):
 
 
 # 3.3.0.2. IMG Profile
-@client.command(aliases = ['프로필', '레벨', 'level', 'rank'])
+@client.command(aliases=['프로필', '레벨', 'level', 'rank'])
 async def profile(ctx, user=None):
 
     uid = 0
@@ -713,7 +724,7 @@ async def profile(ctx, user=None):
         temp_user = await client.fetch_user(uid)
         name = temp_user.name
         discrim += str(temp_user.discriminator)
-    
+
     xp = int(dataRead(uid))
     lv = level(xp)
 
@@ -721,15 +732,17 @@ async def profile(ctx, user=None):
         xp1 = 1
         xp2 = 1
     else:
-        xp1 = xp - need_exp(lv-1)
-        xp2 = need_exp(lv) - need_exp(lv-1)
-    
-    background_image = Image.open("./config/rankcard/rankcard.png").convert('RGBA')
+        xp1 = xp - need_exp(lv - 1)
+        xp2 = need_exp(lv) - need_exp(lv - 1)
+
+    background_image = Image.open("./config/rankcard/rankcard.png").convert(
+        'RGBA')
     bar_cover_image = Image.open("./config/rankcard/bar.png").convert('RGBA')
-    emblem_image = Image.open("./config/rankcard/emblem/{}.png".format(lv)).convert('RGBA')
+    emblem_image = Image.open(
+        "./config/rankcard/emblem/{}.png".format(lv)).convert('RGBA')
 
     emblem_image = emblem_image.resize((72, 72))
-    bar_cover_image = bar_cover_image.crop((0, 0, 368*xp1/xp2, 8))
+    bar_cover_image = bar_cover_image.crop((0, 0, 368 * xp1 / xp2, 8))
 
     #duplicate image
     image = background_image.copy()
@@ -746,8 +759,9 @@ async def profile(ctx, user=None):
     #text2 = "Balance: {} h".format(format(int(coinRead(obj)), ','))
     #text2.encode("utf-8")
 
-    text_xp = "[XP] {} | {} ({:.2f}%)".format(xp1, xp2, 100*xp1/xp2)
-    emblem = "{} {} Emblem".format(arr_emblem[0][int((lv-1)%10)], arr_emblem[1][int((lv-1)/10)])
+    text_xp = "[XP] {} | {} ({:.2f}%)".format(xp1, xp2, 100 * xp1 / xp2)
+    emblem = "{} {} Emblem".format(arr_emblem[0][int((lv - 1) % 10)],
+                                   arr_emblem[1][int((lv - 1) / 10)])
 
     font_name = ImageFont.truetype("./font/name.ttf", 30)
     font_discrim = ImageFont.truetype("./font/xp.ttf", 18)
@@ -758,7 +772,7 @@ async def profile(ctx, user=None):
     tw_discrim, th_discrim = draw.textsize(discrim, font=font_discrim)
     tw_emblem, th_emblem = draw.textsize(emblem, font=font_emblem)
     tw_xp, th_xp = draw.textsize(text_xp, font=font_xp)
-    
+
     x1 = 384 - 8 - tw_name - tw_discrim
     y1 = 8
 
@@ -771,10 +785,10 @@ async def profile(ctx, user=None):
     x4 = (384 - tw_xp) / 2
     y4 = 124
 
-    draw.text((x1, y1), str(name), fill=(255,255,255,255), font=font_name)
-    draw.text((x2, y2), discrim, fill=(204,204,204,255), font=font_discrim)
-    draw.text((x3, y3), emblem, fill=(255,255,255,255), font=font_emblem)
-    draw.text((x4, y4), text_xp, fill=(255,255,255,255), font=font_xp)
+    draw.text((x1, y1), str(name), fill=(255, 255, 255, 255), font=font_name)
+    draw.text((x2, y2), discrim, fill=(204, 204, 204, 255), font=font_discrim)
+    draw.text((x3, y3), emblem, fill=(255, 255, 255, 255), font=font_emblem)
+    draw.text((x4, y4), text_xp, fill=(255, 255, 255, 255), font=font_xp)
 
     #avatar
     a_user = await client.fetch_user(uid)
@@ -861,6 +875,7 @@ async def dice(ctx, i=6, lan="kor"):
 
 # 3.3.3. Level Viewer
 
+
 # 3.3.3.1. Level Icon Viewer
 @client.command(aliases=['아이콘'], pass_context=True, case_insensitive=False)
 async def icon(ctx, lv=None):
@@ -910,7 +925,6 @@ async def coin(ctx, obj="all", amount=0):
         user = await client.fetch_user(obj)
         coinWrite(obj, str(int(coinRead(obj)) + amount))
         await ctx.send("**{}**(은)는 성공적으로 **{}ℏ**를 받았습니다!".format(user, amount))
-
 
 
 #야추 자극 명령어
