@@ -1,0 +1,256 @@
+---
+main :
+ title : "Helpdesk"
+ id : "00"
+ Essentials : "`test`, `myid`, `credits`, `code`, `nickname`, `discrim`, `argentumbot`"
+ UserProfile : "`profile`, `emblem`, `myrank`, `ranking`, `storage`, `preview`"
+ Economy : "`Not yet added.`"
+ Miscellaneous : "`dice`, `coomoji`, `rage`, `monchang`, `translate`"
+ Minigame : "`rsp`, `yatchzee`, `wordchain`"
+ WagyumonServer : "`pokedex`, `tm`"
+ AdminFeatures : "`login`, `logout`"
+ AdminDebugging : "`xp`, `userlist`, `rankinglist`, `validtest`, `unlock`, `ultimate`, `money`, `kakao`, `sync`"
+
+test :
+ title : "Test Command"
+ id : "01"
+ ctx : "[ctx: test | 테스트] <str: text>"
+ discript : "Test commands. The bot prints out the sentence as it is."
+ args : "`text` str type, you can enter all characters, including str type and spacing, and the bot outputs this part as it is (default: none)."
+
+myid :
+ title : "My User id"
+ id : "02"
+ ctx : "myid"
+ discript : "Check your discord account UID value and creation date."
+ args : "No arguments in this command."
+
+credits :
+ title : "Credits"
+ id : "03"
+ ctx : "[ctx: credits | 제작자]"
+ discript : "Thank you to those who even helped create the bot!"
+ args : "No arguments in this command."
+
+code :
+ title : "Special Code Input"
+ id : "04"
+ ctx : "[ctx: code | 코드] <str: text>"
+ discript : "Command to enter a code value to receive a gift."
+ args : "`test` str type, enter a code value (defualt: none)."
+
+nickname :
+ title : "Change Nickname"
+ id : "05"
+ ctx : "[ctx: nickname | 별명] <str: name>"
+ discript : "Change your nickname!\nNames are important to all dear ones..."
+ args : "`name` str type, the name to change. Up to 16 characters are allowed!"
+
+discrim :
+ title : "My Driscriminator #0000"
+ id : "06"
+ ctx : "[ctx: discrim | 식별번호]"
+ discript : "Show your discriminator number."
+ args : "No arguments in this command."
+
+argentumbot :
+ title : "Bot Info"
+ id : "07"
+ ctx : "argentumbot"
+ discript : "Show bot's infomation."
+ args : "No arguments in this command."
+
+profile :
+ title : "User Profile"
+ id : "11"
+ ctx : "[ctx: profile | 프로필] <user: Discord.user.id>"
+ discript : "Displays the user profile. You can check the level, experience, nickname, profile picture, and skin you are applying."
+ args : "`user` discord.user.id type, Select the user to view the profile with the user mention function of Discord. If left blank, the command user himself is specified (defualt: none)."
+
+emblem :
+ title : "Emblem"
+ id : "12"
+ ctx : "[ctx: emblem | 엠블럼] <int: level>"
+ discript : "Use to view icons and required experience values for each level."
+ args : "`level` int type, enter a level value (default value: your level)."
+
+myrank :
+ title : "My Ranking"
+ id : "13"
+ ctx : "myrank"
+ discript : "Check your level and global ranking."
+ args : "No arguments in this command."
+
+ranking :
+ title : "XP Ranking"
+ id : "14"
+ ctx : "ranking <opt: range> <int: page>"
+ discript : "You can see the ranking of users. Ranking is output based on total acquired experience."
+ args : "`range` option, (default: global).\n`page` int type, enter a value for the page to view (default: 1)."
+
+storage :
+ title : "Skin Storage"
+ id : "19"
+ ctx : "skin <opt: option> <int: value>"
+ discript : "You can see the ranking of users. Ranking is output based on total acquired experience (default: ;storage list 1)."
+
+skin :
+ title : "Skin Storage"
+ id : "19"
+ ctx : "skin <opt: option> <int: value>"
+ discript : "You can see the ranking of users. Ranking is output based on total acquired experience (default: ;storage list 1)."
+
+preview :
+ title : "Skin Preview"
+ id : "20"
+ ctx : "preview <int: value>"
+ discript : "Preview the appearance after changing the skin."
+ args : "`value` int type, enter skin id value."
+
+dice :
+ title : "Dice"
+ id : "31"
+ ctx : "[ctx: dice | 주사위] <int: value> <opt: non_zero> <opt: skin>"
+ discript : "Pick a random number."
+ args : "`value` int type, enter text size (default: 99).\n`non_zero` option, 0 input includes 0, 1 input does not include 0 (default: 1).\n`skin` option, choose between 1, 2, and 3 (default: random)."
+
+coomoji :
+ title : "쿠모티콘 (전체공룡 서버 특전)"
+ id : "32"
+ ctx : "[ctx: coomoji | 쿠모티콘] <opt: option>"
+ discript : "쿠모티콘 기능이 부활했습니다! `;쿠모티콘`을 통해 목록을 살펴 보아요!"
+ args : "[ctx: rage | 격노] <int: text_size> <object: str> <text: str>"
+
+rage :
+ title : "Ivory's Rage (┛◉Д◉)┛彡┻━┻"
+ id : "36"
+ ctx : "[ctx: rage | 격노] <int: text_size> <object: str> <text: str>"
+ discript : "Ivory with dragon tattoos expresses your anger instead."
+ args : "`text_size` int type, enter text size (default: 24).\n`object` str type, enter the object of anger (default: none).\n`text` int str, enter a message of anger (default: none)."
+
+monchang :
+ title : "자네 혹시 똥몬창인가? (태양수렵단 마이너 갤러리 특전)"
+ id : "37"
+ ctx : "[ctx: monchang | 똥몬창지수] <user: Discord.user.id>"
+ discript : "자네 몸에서 지독한 냄새가 나는데... 혹시 똥몬창인가?"
+ args : "`user` discord.user.id type, Select the user to test. If left blank, the command user himself is specified (defualt: none)."
+
+translate :
+ title : "Translator"
+ id : "39"
+ ctx : "[ctx: translate | 번역] <lan: before> <lan: after> <str: text>"
+ discript : "Papago API-based translation function is provided! A total of 17 languages are supported.\nAlso... Eunbi is good at foreign languages (๑╹ワ╹)"
+ args : "`before` language code, select the language code of the sentence before translation (defualt: none).\n`after` language code, select the language code for translation results (defualt: none).\n`text` str type, enter the text to be translated (defualt: none)."
+
+rsp :
+ title : "Rock Scissor Paper"
+ id : "40"
+ ctx : "login <id> <password>"
+ discript : "Not yet."
+ args : "(￣▽￣)ノ"
+
+yatchzee :
+ title : "Yatchzee"
+ id : "41"
+ ctx : "login <id> <password>"
+ discript : "Not yet."
+ args : "(￣▽￣)ノ"
+
+wordchain :
+ title : "끝말잇기"
+ id : "42"
+ ctx : "login <id> <password>"
+ discript : "Not yet."
+ args : "(￣▽￣)ノ"
+
+pokedex :
+ title : "외규몬스터 포켓몬 도감"
+ id : "84"
+ ctx : "login <id> <password>"
+ discript : "Login for admin."
+ args : "(￣▽￣)ノ"
+
+tm :
+ title : "외규몬스터 기술머신 도감"
+ id : "85"
+ ctx : "login <id> <password>"
+ discript : "Login for admin."
+ args : "(￣▽￣)ノ"
+
+login :
+ title : "Admin Login"
+ id : "89"
+ ctx : "login <id> <password>"
+ discript : "Login for admin."
+ args : "(￣▽￣)ノ"
+
+login :
+ title : "Admin Logout"
+ id : "90"
+ ctx : "logout"
+ discript : "Logout for admin."
+ args : "(￣▽￣)ノ"
+
+xp :
+ title : "XP Edit - Experience Edit"
+ id : "91"
+ ctx : "[ctx: xp | 경험치] <user: Discord.user.id> <int: value>"
+ discript : "✧٩(ˊωˋ*)و✧ By magic powers...\nGive XP to the recipient."
+ args : "`user` discord.user.id type, Specify which users will receive the experience. Give everyone experience when you type 'all' (default: none).\n`value` int type, enter a xp value (default value: 0)."
+
+userlist :
+ title : "User List"
+ id : "92"
+ ctx : "[ctx: userlist | 유저목록]"
+ discript : "✧٩(ˊωˋ*)و✧ By magic powers...\nOutputs all values stored in the user and database."
+ args : "No arguments in this command."
+
+rankinglist :
+ title : "Ranking List"
+ id : "93"
+ ctx : ""
+ discript : "✧٩(ˊωˋ*)و✧ By magic powers...\nOutput all users in order of acquisition of experience values."
+ args : "No arguments in this command."
+
+validtest :
+ title : "Valid Test"
+ id : "94"
+ ctx : "validtest"
+ discript : "✧٩(ˊωˋ*)و✧ By magic powers...\nConduct validation to ensure appropriate data is reflected."
+ args : "No arguments in this command."
+
+unlock :
+ title : "Storage Editor"
+ id : "95"
+ ctx : "unlock <discord.user:user> <int:skin_id> <binary:option>"
+ discript : "✧٩(ˊωˋ*)و✧ By magic powers...\nEdit skin repository data."
+ args : "(￣▽￣)ノ"
+
+ultimate :
+ title : "Ultimate POWER!!!!!!"
+ id : "96"
+ ctx : "unlock <discord.user:user> <option> <value>"
+ discript : "✧٩(ˊωˋ*)و✧ By magic powers...\nTransform data with magical powers..."
+ args : "(￣▽￣)ノ"
+
+money :
+ title : "Money Editor"
+ id : "97"
+ ctx : "[ctx: money | 돈] <user: Discord.user.id> <int: value>"
+ discript : "✧٩(ˊωˋ*)و✧ By magic powers...\nGive money to the recipient."
+ args : "`user` discord.user.id type, Specify which users will receive the money. Give everyone money when you type 'all' (default: none).\n`value` int type, enter a money value (default value: 0)."
+
+kakao :
+ title : "ALTERED Ultimate POWER!!!!!!"
+ id : "98"
+ ctx : "kakao <user: user> <option> <value>"
+ discript : "✧٩(ˊωˋ*)و✧ By magic powers...\nTransform data with magical powers..."
+ args : "(￣▽￣)ノ"
+
+kakao :
+ title : "Sync"
+ id : "99"
+ ctx : "sync"
+ discript : "✧٩(ˊωˋ*)و✧ By magic powers...\nSynced commands to the current server!"
+ args : "(￣▽￣)ノ"
+...

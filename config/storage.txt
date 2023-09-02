@@ -1,0 +1,51 @@
+[001] Level UP 1: Default - Default Skin - none - none
+[002] Level UP 2: Beginner - Reach level 11. - level - 11
+[003] Level UP 3: Novice - Reach level 36. - level - 36
+[004] Level UP 4: Expert - Reach level 61. - level - 61
+[005] Level UP 5: Master - Reach level 91. - level - 91
+[006] Hidden Skin 1: Stelle XP - Use magic word to unlock >:D - none - none
+[007] Codin' Dev Collabo 1: Codin' with Dizzt - Visit Codin' Dizzt blog! - none - none
+[008] LK Collabo 1: Screw Up! - Beat 139th level of LK! - none - none
+[009] LK Collabo 2: LK Crews - Find the vital point of the oriental dragon hidden in the 184th level of LK. - none - none
+[010] ANS Collabo 1: Glow - When was this game first released? (yyyymmdd) - none - none
+[011] ANS Collabo 2: Basic - Unlock this skin by entering the title of Level 21 in Basic Pack in lowercase letters, no spaces. - none - none
+[012] ANS Collabo 3: Lumber - Unlock this skin by entering the title of Level 19 in Lumber Pack in lowercase letters, no spaces. - none - none
+[013] ANS Collabo 4: Factory - Unlock this skin by entering the title of Level 19 in Factory Pack in lowercase letters, no spaces. - none - none
+[014] ANS Collabo 5: Evil Thorns - Unlock this skin by entering the title of Level 19 in Botany Pack in lowercase letters, no spaces. - none - none
+[015] ANS Collabo 6: Sketch - Unlock this skin by entering the title of Level 19 in Doodle Pack in lowercase letters, no spaces. - none - none
+[016] ANS Collabo 7: Gadget - Unlock this skin by entering the title of Level 21 in Gadget Pack in lowercase letters, no spaces. - none - none
+[017] ANS Collabo 8: Frost Crystal - Unlock this skin by entering the title of Level 14 in Frost Pack in lowercase letters, no spaces. - none - none
+[018] ANS Collabo 9: Jazzy Mono - Unlock this skin by entering the title of Level 10 in Jazzy Pack in lowercase letters, no spaces. - none - none
+[019] Hidden Skin 2: Dizzt's Special - (July 24, 2023) Happy 22nd birthday, Dizzt >:D (Available for purchase for $39,900 by end of promotion) - money - 39900
+[020] Hidden Skin 3: Am I Sure? - Carrot Special >:D - none - none
+[021] Hidden Skin 4: Argente One - (August 1, 2023) Happy 21st birthday, Argente >:D (Available for purchase for $39,900 by end of promotion) - money - 39900
+[022] Hidden Skin 5: Return of the Emperor - Choose exactly 22 from random numbers from 1 to 222! (August 8, 2023) - none - none
+[023] TEDNE Collabo 1: The End Does Not Eliminated? - Beat the 100th level of TEDNE! - none - none
+[024] Level UP 6: Blooming Lady - (July 8, 2023) Happy 21st birthday, Logi >:D Reach level 76 to unlock!! - level - 76
+[025] Abstract 1: Color Pencils - Purchase for $13,900 to unlock! - money - 13900
+[026] Abstract 2: Waterpaint 1 - Purchase for $11,900 to unlock! - money - 11900
+[027] Abstract 3: Waterpaint 2 - Purchase for $11,900 to unlock! - money - 11900
+[028] Abstract 4: Waterpaint 3 - Purchase for $11,900 to unlock! - money - 11900
+[029] Neon 1: Comet - Purchase for $15,900 to unlock! - money - 15900
+[030] Neon 2: Mountain - Purchase for $15,900 to unlock! - money - 15900
+[031] Neon 3: Retro - Purchase for $16,900 to unlock! - money - 16900
+[032] Neon 4: Console - Purchase for $16,900 to unlock! - money - 16900
+[033] Steam 1: Steam Logo - Purchase for $23,900 to unlock! - money - 23900
+[034] Minecraft 1: Overworld - Purchase for $19,900 to unlock! - money - 19900
+[035] Minecraft 2: Steve - Purchase for $19,900 to unlock! - money - 19900
+[036] Minecraft 3: Ores - Purchase for $23,900 to unlock! - money - 23900
+[037] Pokemon 1: Pokeball - Purchase for $15,900 to unlock! - money - 18900
+[038] Pokemon 2: Pikachu - Purchase for $18,900 to unlock! - money - 18900
+[039] Pokemon 3: Rayquaza - Purchase for $18,900 to unlock! - money - 18900
+[040] Pokemon 4: Eevees - Purchase for $18,900 to unlock! - money - 18900
+[041] Pokemon 5: Chandelure - Purchase for $18,900 to unlock! - money - 18900
+[042] Pokemon 6: Darkrai - Purchase for $18,900 to unlock! - money - 18900
+[043] Pokemon 7: Meloetta - Purchase for $18,900 to unlock! - money - 18900
+[044] Touhou Project 1: Flandre Scarlet - Purchase for $18,900 to unlock! - money - 18900
+[045] Touhou Project 2: Reimu & Marisa - Purchase for $18,900 to unlock! - money - 18900
+[046] Touhou Project 3: Koishi Komeiji - Purchase for $18,900 to unlock! - money - 18900
+[047] Touhou Project 4: Remilia Scarlet - Purchase for $18,900 to unlock! - money - 18900
+[048] Touhou Project 5: Youmu Konpaku - Purchase for $18,900 to unlock! - money - 18900
+[04⑨] Touhou Project 6: Cirno - Purchase for $18,⑨00 to unlock! - money - 18900
+[050] Hidden Skin 6: Detective Stelle - Score 261 or higher on Yatchzee Dice! - none - none
+[051] Level UP 7: Blueprint - Reach level 31. - level - 31
